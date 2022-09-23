@@ -27,37 +27,7 @@ namespace ConsoleApp1
             ob.Randomize();
         }
     }
-
-    public class Testlet
-    {
-        public string TestletId;
-        private List<Item> Items;
-
-        public Testlet()
-        {
-
-        }
-
-        public Testlet(string testletId, List<Item> items)
-        {
-            TestletId = testletId;
-            Items = items;
-        }
-        public List<Item> Randomize()
-        {  
-            var  result = Items.OrderBy(c => c.ItemType).ToList();
-            foreach(var res in result)
-            {
-                Console.WriteLine(res.ItemType);
-            }
-            return result;
-        }
-    }
-    public class Item
-    {
-        public string ItemId;
-        public ItemTypeEnum ItemType;
-    }
+    
     public enum ItemTypeEnum
     {
         Pretest = 0,
